@@ -1,0 +1,33 @@
+{
+  "title": "Code Highlighter",
+  "description": "Request user to press a combinaison of keys",
+  "majorVersion": 1,
+  "minorVersion": 0,
+  "patchVersion": 1,
+  "runnable": 1,
+  "embedTypes": ["iframe"],
+  "author": "Degrange Mathieu",
+  "license": "MIT",
+  "machineName": "H5P.CodeHighlighter",
+  "preloadedJs": [
+    {
+      "path": "h5p-code-highlighter.js"
+    }
+  ],
+  "preloadedCss": [
+  ],
+  "preloadedDependencies": [
+    {
+      "machineName": "CodeMirror",
+      "majorVersion": 1,
+      "minorVersion": 0
+    }
+  ],
+  "editorDependencies": [
+    {
+      "machineName": "H5PEditor.CodeEditor",
+      "majorVersion": 1,
+      "minorVersion": 0
+    }
+  ]
+}

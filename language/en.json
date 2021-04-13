@@ -1,0 +1,62 @@
+{
+  "semantics": [
+    {
+      "label": "Shortcut",
+      "description": "Choose the shortcut the user will need to press. You can then use the second field to rename displayed text instead of using technical key name. Some shortcut like Alt+Tab can't be detected because the windows lose focus, however we can register this blur event (lose of focus) to try to detect the shortcut, just put the real key name in the second field."
+    },
+    {
+      "label": "Mode",
+      "description": "Key mapping depends on the keyboard type. For example, the first letter is a Q on qwerty keyboard but is an A on AZERTY keyboard. Shortcut can either be based on key content (Q key) or on key position (first letter). Usually you will want to use key content.",
+      "options": [
+        {
+          "label": "Use content"
+        },
+        {
+          "label": "Use position"
+        }
+      ]
+    },
+    {
+      "label": "Prevent key press to trigger event",
+      "description": "Key press might trigger event. It's possible to disable all event, the event of the full shurtcut (for example, selecting all text for Ctrl+A), all event exept the full shortcut or to disable nothing. This might not work for some shortcut such as Ctrl+W or Alt+F4.",
+      "options": [
+        {
+          "label": "Prevent all key from the shortcut to trigger event"
+        },
+        {
+          "label": "Prevent only the shortcut to trigger event, but not individual key from the shortcut"
+        },
+        {
+          "label": "Prevent all individual key press from the shortcut to trigger event but allow the full shortcut to trigger it's effect"
+        },
+        {
+          "label": "Allow all key press to trigger event."
+        }
+      ]
+    },
+    {
+      "label": "Text to show on success",
+      "description": "Optional text to display below the activity on success."
+    },
+    {
+      "label": "Show start button",
+      "description": "Require the user to press a start button before typing the shortcut. This must be checked if the h5p activity is loaded in an iframe for technical reason."
+    },
+    {
+      "label": "Press the button to start the activity",
+      "default": "Press the button to start the activity"
+    },
+    {
+      "label": "Start",
+      "default": "Start"
+    },
+    {
+      "label": "Press the following keys on your keyboards",
+      "default": "Press the following keys on your keyboards"
+    },
+    {
+      "label": "Continue",
+      "default": "Continue"
+    }
+  ]
+}

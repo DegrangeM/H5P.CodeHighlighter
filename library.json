@@ -1,9 +1,9 @@
 {
   "title": "Code Highlighter",
-  "description": "Request user to press a combinaison of keys",
+  "description": "Display code from various language (html, javascript, python, etc.) with syntax highlighting",
   "majorVersion": 1,
   "minorVersion": 0,
-  "patchVersion": 1,
+  "patchVersion": 0,
   "runnable": 1,
   "embedTypes": ["iframe"],
   "author": "Degrange Mathieu",

@@ -504,6 +504,10 @@
     {
       "label": "First line number",
       "description": "Change this if you want your line numbering to start from an other number than 1."
+    },
+    {
+      "label": "Max height",
+      "description": "Max height (in pixels) of the editor. Set it to 0 if you don't want to put a max height."
     }
   ]
 }

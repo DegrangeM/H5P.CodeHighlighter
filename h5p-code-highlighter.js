@@ -14,8 +14,9 @@ H5P.CodeHighlighter = (function ($) {
       'readOnly': true,
       'lineWrapping': true,
       'foldGutter': true,
-      'tabSize': '2',
-      'firstLineNumber': '12'
+      'tabSize': 2,
+      'firstLineNumber': 1,
+      'maxHeight': 0
     }, options);
     // Keep provided id.
     this.id = id;
@@ -58,6 +59,14 @@ H5P.CodeHighlighter = (function ($) {
         }
       }
     });
+
+    this.editor.on('changes', function () {
+      self.trigger('resize');
+    });
+
+    if (this.options.maxHeight !== 0) {
+      $container.find('.CodeMiror').css('max-height', this.options.maxHeight);
+    }
 
     this.editor.refresh(); // required to avoid bug where line number overlap code that might happen in some condition
 

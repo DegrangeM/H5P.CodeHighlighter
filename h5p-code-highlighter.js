@@ -8,13 +8,14 @@ H5P.CodeHighlighter = (function ($) {
     this.$ = $(this);
     // Extend defaults with provided options
     this.options = $.extend(true, {}, {
-      'shortcutMode': 'content',
-      'preventTrigger': 'all',
-      'showStartButton': true,
-      'pressButtonToStart': 'Press the button to start the activity',
-      'startButton': 'Start',
-      'pressKeys': 'Press the following keys on your keyboards',
-      'continueButton': 'Continue'
+      'language': 'HTML',
+      'code': '',
+      'lineNumbers': true,
+      'readOnly': true,
+      'lineWrapping': true,
+      'foldGutter': true,
+      'tabSize': '2',
+      'firstLineNumber': '12'
     }, options);
     // Keep provided id.
     this.id = id;
@@ -34,24 +35,25 @@ H5P.CodeHighlighter = (function ($) {
     this.editor = CodeMirror($container[0], {
       value: CodeMirror.H5P.decode(this.options.code) || '',
       keyMap: 'sublime',
-      tabSize: 2,
+      tabSize: this.options.tabSize,
       indentWithTabs: true,
       lineNumbers: this.options.lineNumbers,
+      firstLineNumber: this.options.firstLineNumber,
       readOnly: this.options.readOnly,
       lineWrapping: this.options.lineWrapping,
       matchBrackets: true,
       foldGutter: this.options.foldGutter,
-      gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"],
+      gutters: ['CodeMirror-linenumbers', 'CodeMirror-foldgutter'],
       styleActiveLine: {
         nonEmpty: true
       },
       extraKeys: {
-        "F11": function (cm) {
-          cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+        'F11': function (cm) {
+          cm.setOption('fullScreen', !cm.getOption('fullScreen'));
         },
-        "Esc": function (cm) {
-          if (cm.getOption("fullScreen")) {
-            cm.setOption("fullScreen", false);
+        'Esc': function (cm) {
+          if (cm.getOption('fullScreen')) {
+            cm.setOption('fullScreen', false);
           }
         }
       }
@@ -64,6 +66,13 @@ H5P.CodeHighlighter = (function ($) {
     this.trigger('resize');
   };
 
+  /**
+   * Configure the editor to use a language.
+   * This will check the language exist and
+   * load the javascript file if required.
+   * 
+   * @param {string} mode Name of the language
+   */
   C.prototype.setLanguage = function (mode) {
     if (mode === 'null') {
       this.editor.setOption('mode', null);

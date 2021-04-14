@@ -656,52 +656,37 @@
     "type": "boolean",
     "default": true,
     "label": "Read only",
-    "description": "If checked, it will not be possible to edit the code. The code will still be selectable."
+    "description": "If checked, it will not be possible to edit the code. The code will still be selectable. This does not affect this authoring view."
   },
   {
     "name": "lineWrapping",
     "type": "boolean",
     "default": true,
     "label": "Automatic Line Wrapping",
-    "description": "If a line is too long, display it on multiple line instead of showing an horizontal scrollbar."
+    "description": "If a line is too long, display it on multiple line instead of showing an horizontal scrollbar. This does not affect this authoring view."
   },
   {
     "name": "foldGutter",
     "type": "boolean",
     "default": true,
     "label": "Allow to fold block",
-    "description": "Display an icon at the left allowing to fold some portion of the code."
+    "description": "Display an icon at the left allowing to fold some portion of the code. This does not affect this authoring view."
   },
   {
-    "name": "pressButtonToStart",
-    "type": "text",
-    "label": "Press the button to start the activity",
-    "importance": "low",
-    "default": "Press the button to start the activity",
-    "common": true
+    "name": "tabSize",
+    "type": "number",
+    "label": "Tab Size",
+    "description": "Size of tabs on the display page. This does not affect this authoring view.",
+    "min": 1,
+    "max": 8,
+    "step": 1,
+    "default": 2
   },
   {
-    "name": "startButton",
-    "type": "text",
-    "label": "Start",
-    "importance": "low",
-    "default": "Start",
-    "common": true
-  },
-  {
-    "name": "pressKeys",
-    "type": "text",
-    "label": "Press the following keys on your keyboards",
-    "importance": "low",
-    "default": "Press the following keys on your keyboards",
-    "common": true
-  },
-  {
-    "name": "continueButton",
-    "type": "text",
-    "label": "Continue",
-    "importance": "low",
-    "default": "Continue",
-    "common": true
+    "name": "firstLineNumber",
+    "type": "number",
+    "label": "First line number",
+    "description": "Change this if you want your line numbering to start from an other number than 1.",
+    "default": 1
   }
 ]

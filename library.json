@@ -14,8 +14,6 @@
       "path": "h5p-code-highlighter.js"
     }
   ],
-  "preloadedCss": [
-  ],
   "preloadedDependencies": [
     {
       "machineName": "CodeMirror",

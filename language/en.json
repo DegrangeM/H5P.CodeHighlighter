@@ -1,62 +1,509 @@
 {
   "semantics": [
     {
-      "label": "Shortcut",
-      "description": "Choose the shortcut the user will need to press. You can then use the second field to rename displayed text instead of using technical key name. Some shortcut like Alt+Tab can't be detected because the windows lose focus, however we can register this blur event (lose of focus) to try to detect the shortcut, just put the real key name in the second field."
-    },
-    {
-      "label": "Mode",
-      "description": "Key mapping depends on the keyboard type. For example, the first letter is a Q on qwerty keyboard but is an A on AZERTY keyboard. Shortcut can either be based on key content (Q key) or on key position (first letter). Usually you will want to use key content.",
+      "label": "Language",
+      "description": "Select the language of your code.",
       "options": [
         {
-          "label": "Use content"
+          "label": "APL"
         },
         {
-          "label": "Use position"
+          "label": "PGP"
+        },
+        {
+          "label": "ASN.1"
+        },
+        {
+          "label": "Asterisk"
+        },
+        {
+          "label": "Brainfuck"
+        },
+        {
+          "label": "C"
+        },
+        {
+          "label": "C++"
+        },
+        {
+          "label": "Cobol"
+        },
+        {
+          "label": "C#"
+        },
+        {
+          "label": "Clojure"
+        },
+        {
+          "label": "ClojureScript"
+        },
+        {
+          "label": "Closure Stylesheets (GSS)"
+        },
+        {
+          "label": "CMake"
+        },
+        {
+          "label": "CoffeeScript"
+        },
+        {
+          "label": "Common Lisp"
+        },
+        {
+          "label": "Cypher"
+        },
+        {
+          "label": "Cython"
+        },
+        {
+          "label": "Crystal"
+        },
+        {
+          "label": "CSS"
+        },
+        {
+          "label": "CQL"
+        },
+        {
+          "label": "D"
+        },
+        {
+          "label": "Dart"
+        },
+        {
+          "label": "diff"
+        },
+        {
+          "label": "Django"
+        },
+        {
+          "label": "Dockerfile"
+        },
+        {
+          "label": "DTD"
+        },
+        {
+          "label": "Dylan"
+        },
+        {
+          "label": "EBNF"
+        },
+        {
+          "label": "ECL"
+        },
+        {
+          "label": "edn"
+        },
+        {
+          "label": "Eiffel"
+        },
+        {
+          "label": "Elm"
+        },
+        {
+          "label": "Embedded JavaScript"
+        },
+        {
+          "label": "Embedded Ruby"
+        },
+        {
+          "label": "Erlang"
+        },
+        {
+          "label": "Esper"
+        },
+        {
+          "label": "Factor"
+        },
+        {
+          "label": "FCL"
+        },
+        {
+          "label": "Forth"
+        },
+        {
+          "label": "Fortran"
+        },
+        {
+          "label": "F#"
+        },
+        {
+          "label": "Gas"
+        },
+        {
+          "label": "Gherkin"
+        },
+        {
+          "label": "GitHub Flavored Markdown"
+        },
+        {
+          "label": "Go"
+        },
+        {
+          "label": "Groovy"
+        },
+        {
+          "label": "HAML"
+        },
+        {
+          "label": "Haskell"
+        },
+        {
+          "label": "Haskell (Literate)"
+        },
+        {
+          "label": "Haxe"
+        },
+        {
+          "label": "HXML"
+        },
+        {
+          "label": "ASP.NET"
+        },
+        {
+          "label": "HTML"
+        },
+        {
+          "label": "HTTP"
+        },
+        {
+          "label": "IDL"
+        },
+        {
+          "label": "Pug"
+        },
+        {
+          "label": "Java"
+        },
+        {
+          "label": "Java Server Pages"
+        },
+        {
+          "label": "JavaScript"
+        },
+        {
+          "label": "JSON"
+        },
+        {
+          "label": "JSON-LD"
+        },
+        {
+          "label": "JSX"
+        },
+        {
+          "label": "Jinja2"
+        },
+        {
+          "label": "Julia"
+        },
+        {
+          "label": "Kotlin"
+        },
+        {
+          "label": "LESS"
+        },
+        {
+          "label": "LiveScript"
+        },
+        {
+          "label": "Lua"
+        },
+        {
+          "label": "Markdown"
+        },
+        {
+          "label": "mIRC"
+        },
+        {
+          "label": "MariaDB SQL"
+        },
+        {
+          "label": "Mathematica"
+        },
+        {
+          "label": "Modelica"
+        },
+        {
+          "label": "MUMPS"
+        },
+        {
+          "label": "MS SQL"
+        },
+        {
+          "label": "mbox"
+        },
+        {
+          "label": "MySQL"
+        },
+        {
+          "label": "Nginx"
+        },
+        {
+          "label": "NSIS"
+        },
+        {
+          "label": "NTriples"
+        },
+        {
+          "label": "Objective-C"
+        },
+        {
+          "label": "Objective-C++"
+        },
+        {
+          "label": "OCaml"
+        },
+        {
+          "label": "Octave"
+        },
+        {
+          "label": "Oz"
+        },
+        {
+          "label": "Pascal"
+        },
+        {
+          "label": "PEG.js"
+        },
+        {
+          "label": "Perl"
+        },
+        {
+          "label": "PHP"
+        },
+        {
+          "label": "Pig"
+        },
+        {
+          "label": "Plain Text"
+        },
+        {
+          "label": "PLSQL"
+        },
+        {
+          "label": "PostgreSQL"
+        },
+        {
+          "label": "PowerShell"
+        },
+        {
+          "label": "Properties files"
+        },
+        {
+          "label": "ProtoBuf"
+        },
+        {
+          "label": "Python"
+        },
+        {
+          "label": "Puppet"
+        },
+        {
+          "label": "Q"
+        },
+        {
+          "label": "R"
+        },
+        {
+          "label": "reStructuredText"
+        },
+        {
+          "label": "RPM Changes"
+        },
+        {
+          "label": "RPM Spec"
+        },
+        {
+          "label": "Ruby"
+        },
+        {
+          "label": "Rust"
+        },
+        {
+          "label": "SAS"
+        },
+        {
+          "label": "Sass"
+        },
+        {
+          "label": "Scala"
+        },
+        {
+          "label": "Scheme"
+        },
+        {
+          "label": "SCSS"
+        },
+        {
+          "label": "Shell"
+        },
+        {
+          "label": "Sieve"
+        },
+        {
+          "label": "Slim"
+        },
+        {
+          "label": "Smalltalk"
+        },
+        {
+          "label": "Smarty"
+        },
+        {
+          "label": "Solr"
+        },
+        {
+          "label": "SML"
+        },
+        {
+          "label": "Soy"
+        },
+        {
+          "label": "SPARQL"
+        },
+        {
+          "label": "Spreadsheet"
+        },
+        {
+          "label": "SQL"
+        },
+        {
+          "label": "SQLite"
+        },
+        {
+          "label": "Squirrel"
+        },
+        {
+          "label": "Stylus"
+        },
+        {
+          "label": "Swift"
+        },
+        {
+          "label": "sTeX"
+        },
+        {
+          "label": "LaTeX"
+        },
+        {
+          "label": "SystemVerilog"
+        },
+        {
+          "label": "Tcl"
+        },
+        {
+          "label": "Textile"
+        },
+        {
+          "label": "TiddlyWiki"
+        },
+        {
+          "label": "Tiki wiki"
+        },
+        {
+          "label": "TOML"
+        },
+        {
+          "label": "Tornado"
+        },
+        {
+          "label": "troff"
+        },
+        {
+          "label": "TTCN"
+        },
+        {
+          "label": "TTCN_CFG"
+        },
+        {
+          "label": "Turtle"
+        },
+        {
+          "label": "TypeScript"
+        },
+        {
+          "label": "TypeScript-JSX"
+        },
+        {
+          "label": "Twig"
+        },
+        {
+          "label": "Web IDL"
+        },
+        {
+          "label": "VB.NET"
+        },
+        {
+          "label": "VBScript"
+        },
+        {
+          "label": "Velocity"
+        },
+        {
+          "label": "Verilog"
+        },
+        {
+          "label": "VHDL"
+        },
+        {
+          "label": "Vue.js Component"
+        },
+        {
+          "label": "XML"
+        },
+        {
+          "label": "XQuery"
+        },
+        {
+          "label": "Yacas"
+        },
+        {
+          "label": "YAML"
+        },
+        {
+          "label": "Z80"
+        },
+        {
+          "label": "mscgen"
+        },
+        {
+          "label": "xu"
+        },
+        {
+          "label": "msgenny"
+        },
+        {
+          "label": "WebAssembly"
         }
       ]
     },
     {
-      "label": "Prevent key press to trigger event",
-      "description": "Key press might trigger event. It's possible to disable all event, the event of the full shurtcut (for example, selecting all text for Ctrl+A), all event exept the full shortcut or to disable nothing. This might not work for some shortcut such as Ctrl+W or Alt+F4.",
-      "options": [
-        {
-          "label": "Prevent all key from the shortcut to trigger event"
-        },
-        {
-          "label": "Prevent only the shortcut to trigger event, but not individual key from the shortcut"
-        },
-        {
-          "label": "Prevent all individual key press from the shortcut to trigger event but allow the full shortcut to trigger it's effect"
-        },
-        {
-          "label": "Allow all key press to trigger event."
-        }
-      ]
+      "label": "Code",
+      "description": "The code to display. You can press Echap then Tab to focus the next field."
     },
     {
-      "label": "Text to show on success",
-      "description": "Optional text to display below the activity on success."
+      "label": "Show Lines Numbers",
+      "description": "Uncheck this to hide the line numbering on the display page. This does not affect this authoring view."
     },
     {
-      "label": "Show start button",
-      "description": "Require the user to press a start button before typing the shortcut. This must be checked if the h5p activity is loaded in an iframe for technical reason."
+      "label": "Read only",
+      "description": "If checked, it will not be possible to edit the code. The code will still be selectable. This does not affect this authoring view."
     },
     {
-      "label": "Press the button to start the activity",
-      "default": "Press the button to start the activity"
+      "label": "Automatic Line Wrapping",
+      "description": "If a line is too long, display it on multiple line instead of showing an horizontal scrollbar. This does not affect this authoring view."
     },
     {
-      "label": "Start",
-      "default": "Start"
+      "label": "Allow to fold block",
+      "description": "Display an icon at the left allowing to fold some portion of the code. This does not affect this authoring view."
     },
     {
-      "label": "Press the following keys on your keyboards",
-      "default": "Press the following keys on your keyboards"
+      "label": "Tab Size",
+      "description": "Size of tabs on the display page. This does not affect this authoring view."
     },
     {
-      "label": "Continue",
-      "default": "Continue"
+      "label": "First line number",
+      "description": "Change this if you want your line numbering to start from an other number than 1."
     }
   ]
 }

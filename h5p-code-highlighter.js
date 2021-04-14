@@ -14,9 +14,11 @@ H5P.CodeHighlighter = (function ($) {
       'readOnly': true,
       'lineWrapping': true,
       'foldGutter': true,
+      'matchTags': false,
       'tabSize': 2,
       'firstLineNumber': 1,
-      'maxHeight': 0
+      'maxHeight': 0,
+      'highlightLines': ''
     }, options);
     // Keep provided id.
     this.id = id;
@@ -43,6 +45,9 @@ H5P.CodeHighlighter = (function ($) {
       readOnly: this.options.readOnly,
       lineWrapping: this.options.lineWrapping,
       matchBrackets: true,
+      matchTags: this.options.matchTags ? {
+        bothTags: true
+      } : false,
       foldGutter: this.options.foldGutter,
       gutters: ['CodeMirror-linenumbers', 'CodeMirror-foldgutter'],
       styleActiveLine: {
@@ -66,6 +71,10 @@ H5P.CodeHighlighter = (function ($) {
 
     if (this.options.maxHeight !== 0) {
       $container.find('.CodeMirror, .CodeMirror-scroll').css('max-height', this.options.maxHeight);
+    }
+
+    if (this.options.highlightLines !== '') {
+      CodeMirror.H5P.highlightLines(this.editor, this.options.highlightLines);
     }
 
     this.editor.refresh(); // required to avoid bug where line number overlap code that might happen in some condition

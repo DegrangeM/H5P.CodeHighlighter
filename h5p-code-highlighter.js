@@ -79,35 +79,10 @@ H5P.CodeHighlighter = (function ($) {
 
     this.editor.refresh(); // required to avoid bug where line number overlap code that might happen in some condition
 
-    this.setLanguage(this.options.language);
+    CodeMirror.H5P.setLanguage(this.editor, this.options.language);
 
     this.trigger('resize');
   };
-
-  /**
-   * Configure the editor to use a language.
-   * This will check the language exist and
-   * load the javascript file if required.
-   * 
-   * @param {string} mode Name of the language
-   */
-  C.prototype.setLanguage = function (mode) {
-    if (mode === 'null') {
-      this.editor.setOption('mode', null);
-      return;
-    }
-    let modeInfo = CodeMirror.findModeByName(mode) || CodeMirror.findModeByMIME(mode);
-    if (modeInfo) {
-      this.editor.setOption('mode', modeInfo.mime); // set the mode by using mime because it allow variation (like typescript which is a variation of javascript)
-      CodeMirror.autoLoadMode(this.editor, modeInfo.mode, { // load the language file if required, then refresh the editor
-        path: function (mode) { // path is safe because mode is from modeInfo.mime
-          return H5P.getLibraryPath('CodeMirror-1.0') + '/mode/' + mode + '/' + mode + '.js';
-        }
-      });
-    } else {
-      this.editor.setOption('mode', null);
-    }
-  }
 
   return C;
 })(H5P.jQuery);

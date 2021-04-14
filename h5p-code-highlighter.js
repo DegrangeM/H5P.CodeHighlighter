@@ -65,7 +65,7 @@ H5P.CodeHighlighter = (function ($) {
     });
 
     if (this.options.maxHeight !== 0) {
-      $container.find('.CodeMiror').css('max-height', this.options.maxHeight);
+      $container.find('.CodeMirror, .CodeMirror-scroll').css('max-height', this.options.maxHeight);
     }
 
     this.editor.refresh(); // required to avoid bug where line number overlap code that might happen in some condition

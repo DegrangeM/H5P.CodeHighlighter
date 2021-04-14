@@ -5,7 +5,9 @@
   "minorVersion": 0,
   "patchVersion": 0,
   "runnable": 1,
-  "embedTypes": ["iframe"],
+  "embedTypes": [
+    "iframe"
+  ],
   "author": "Degrange Mathieu",
   "license": "MIT",
   "machineName": "H5P.CodeHighlighter",

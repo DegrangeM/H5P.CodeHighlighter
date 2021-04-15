@@ -36,7 +36,7 @@ H5P.CodeHighlighter = (function ($) {
     $container.addClass('h5p-code-highlighter');
 
     this.editor = CodeMirror($container[0], {
-      value: CodeMirror.H5P.decode(this.options.code) || '',
+      value: CodeMirror.H5P.decode(this.options.code || '' ),
       keyMap: 'sublime',
       tabSize: this.options.tabSize,
       indentWithTabs: true,

@@ -716,7 +716,9 @@
         "type": "number",
         "label": "First line number",
         "description": "Change this if you want your line numbering to start from an other number than 1.",
-        "default": 1
+        "default": 1,
+        "min": 0,
+        "step": 1
       }
     ]
   }

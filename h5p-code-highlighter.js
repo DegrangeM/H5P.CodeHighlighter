@@ -12,11 +12,13 @@ H5P.CodeHighlighter = (function ($) {
       'code': '',
       'lineNumbers': true,
       'readOnly': true,
-      'lineWrapping': true,
-      'foldGutter': true,
-      'matchTags': false,
-      'tabSize': 2,
-      'firstLineNumber': 1,
+      'advancedOptions': {
+        'lineWrapping': true,
+        'foldGutter': true,
+        'matchTags': false,
+        'tabSize': 2,
+        'firstLineNumber': 1
+      },
       'maxHeight': 0,
       'highlightLines': ''
     }, options);
@@ -36,19 +38,19 @@ H5P.CodeHighlighter = (function ($) {
     $container.addClass('h5p-code-highlighter');
 
     this.editor = CodeMirror($container[0], {
-      value: CodeMirror.H5P.decode(this.options.code || '' ),
+      value: CodeMirror.H5P.decode(this.options.code || ''),
       keyMap: 'sublime',
       tabSize: this.options.tabSize,
       indentWithTabs: true,
       lineNumbers: this.options.lineNumbers,
-      firstLineNumber: this.options.firstLineNumber,
+      firstLineNumber: this.options.advancedOptions.firstLineNumber,
       readOnly: this.options.readOnly,
-      lineWrapping: this.options.lineWrapping,
+      lineWrapping: this.options.advancedOptions.lineWrapping,
       matchBrackets: true,
-      matchTags: this.options.matchTags ? {
+      matchTags: this.options.advancedOptions.matchTags ? {
         bothTags: true
       } : false,
-      foldGutter: this.options.foldGutter,
+      foldGutter: this.options.advancedOptions.foldGutter,
       gutters: ['CodeMirror-linenumbers', 'CodeMirror-foldgutter'],
       styleActiveLine: {
         nonEmpty: true

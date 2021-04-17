@@ -664,7 +664,8 @@
     "label": "Max height",
     "description": "Max height (in pixels) of the editor. Set it to 0 if you don't want to put a max height.",
     "default": 0,
-    "min": 0
+    "min": 0,
+    "step":1
   },
   {
     "name": "highlightLines",

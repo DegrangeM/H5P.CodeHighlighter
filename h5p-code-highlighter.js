@@ -39,6 +39,7 @@ H5P.CodeHighlighter = (function ($) {
 
     this.editor = CodeMirror($container[0], {
       value: CodeMirror.H5P.decode(this.options.code || ''),
+      inputStyle: 'textarea',
       keyMap: 'sublime',
       tabSize: this.options.tabSize,
       indentWithTabs: true,
